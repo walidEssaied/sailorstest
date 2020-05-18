@@ -40,6 +40,18 @@
             background-color: transparent;
             padding: 10px;
         }
+        
+        .item1 { grid-area: contenup; }
+        .item2 { grid-area: pp; }
+        .ap{
+            display: grid;
+            grid-template-areas:
+            'contenup contenup contenup '
+            'pp ';
+            grid-gap: 10px;
+            background-color: transparent;
+            padding: 10px;
+        }
         .navbar{
             font-size: 15px;
             color: whitesmoke !important;
@@ -117,6 +129,45 @@
             .scroll-text{
                 color: #000;
             }
+            .ftr    {
+                margin-top: 280px;
+                background-color: rgba(30, 30, 30, 0.97);
+                height: auto;
+            }
+            .ftr h5 b{
+                color: #006daa;
+            }
+            .ftr h5 b li a{
+                color: white    ;
+            }
+            .isetdesc{
+                color: whitesmoke;
+                margin-left: 10px
+            }
+            .contact{
+                color: white;
+                margin-left: 4px;
+            }
+            .row{
+                margin-bottom: 50px;
+                margin-bottom: 0;
+            }
+            .profile-pic:hover{
+                opacity: 70%
+            }
+            .dropdown-toggle{
+                color: #e4e8eb !important;
+                font-family: Verdana, Geneva, Tahoma, sans-serif
+            }
+            .nav-link{
+                color: #e4e8eb !important;
+                font-family: Verdana, Geneva, Tahoma, sans-serif
+            }
+            .nav-item:hover{
+                background-color:#006daa;;
+                color: white !important;
+                padding: 0px;
+            }
     </style>
 </head>
 <body>
@@ -125,9 +176,9 @@
             <nav class="navbar navbar-light" style="background-color: #006daa;">
                 <div class="container">
                     <div class="sociel-links">
-                    <i class="fab fa-facebook"><a href="https://www.facebook.com/walidessaied9"><img class="profile-pic" src="https://i.pinimg.com/originals/25/9f/1b/259f1bf84989d07005bad20044448530.png" alt="logo facebook" width="40px" style="border-radius: 50%"> </a> </i>
-                            <i class="fab fa-facebook"><a href="https://www.facebook.com/walidessaied9"><img class="profile-pic" src="https://picklefeetgames.com/wp-content/uploads/2018/12/twitter-app-icon-transparent-17-2.png" alt="logo twitter" width="40px" style="border-radius: 50%"></a></i>
-                            <i class="fab fa-facebook"><a href="https://www.facebook.com/walidessaied9"><img class="profile-pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Google_plus_icon.svg/1024px-Google_plus_icon.svg.png" alt="logo google plus" width="40px" style="border-radius: 50%"></a></i>
+                    <i class="fab fa-facebook"><a href="https://www.facebook.com/walidessaied9"><img class="profile-pic" src="https://i.pinimg.com/originals/25/9f/1b/259f1bf84989d07005bad20044448530.png" alt="logo facebook" width="30px" style="border-radius: 50%"> </a> </i>
+                            <i class="fab fa-facebook"><a href="https://www.facebook.com/walidessaied9"><img class="profile-pic" src="https://cdn.pixabay.com/photo/2017/08/23/11/30/twitter-2672572_960_720.jpg" alt="logo twitter" width="30px" style="border-radius: 50%"></a></i>
+                            <i class="fab fa-facebook"><a href="https://www.facebook.com/walidessaied9"><img class="profile-pic" src="data:image/png;base64,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" alt="logo google plus" width="30px" style="border-radius: 50%"></a></i>
                     </div>
                     <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -163,7 +214,8 @@
                                     <tr style="text-align: right;">
                                         <td>
                                             <ul class="menu-top navbar-right hidden-xs">
-                                                <li class="divider" style="list-style:none;font-size: 12px;"><a href="" style="color: #f4c312;text-decoration: none;">EN</a> | <a href="" style="color: #f4c312;text-decoration: none;">AR</a></li>
+                                                <li class="divider" style="list-style:none;font-size: 12px;"><a href="" style="color: #f4c312;text-decoration: none;">EN</a>
+                                                 <SPAN style="color: black">|</SPAN> <a href="" style="color: #f4c312;text-decoration: none;">AR</a></li>
                                             </ul>
                                         </td>
                                     </tr><!--//menu-top-->
@@ -204,11 +256,9 @@
                                         Nouveautés
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="/nouveaute">Manifestations scientifiques</a>
+                                        <a class="dropdown-item" href="#">Manifestations professionnelle</a>
+                                        <a class="dropdown-item" href="#">agenda des évenements</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -216,11 +266,15 @@
                                         Institut                                        
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="/institut">Loi de création</a>
+                                        <a class="dropdown-item" href="#">Batimant</a>
+                                        <a class="dropdown-item" href="#">Organigrame</a>
+                                        <a class="dropdown-item" href="#">En chifres</a>
+                                        <a class="dropdown-item" href="#">Infrastructure</a>
+                                        <a class="dropdown-item" href="#">Conseil scientifique</a>
+                                        <a class="dropdown-item" href="#">Enseignents</a>
+                                        <a class="dropdown-item" href="#">Visite virtuelle</a>
+                                        <a class="dropdown-item" href="#">Gallerie des photos</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -228,11 +282,11 @@
                                         Département                                        
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="departement">Technologie de l'informatique</a>
+                                        <a class="dropdown-item" href="#">Génie électrique</a>
+                                        <a class="dropdown-item" href="#">Science économiques et de gestion</a>
+                                        <a class="dropdown-item" href="#">Génie de procédés</a>
+                                        <a class="dropdown-item" href="#">Génie mécanique</a>
                                         </div>
                                     </li>
                                     <li class="nav-item">
@@ -243,11 +297,13 @@
                                         Formation                                        
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="/formation">Organigramme</a>
+                                        <a class="dropdown-item" href="#">Admission</a>
+                                        <a class="dropdown-item" href="#">Licences appliquées</a>
+                                        <a class="dropdown-item" href="#">Licences co-construites</a>
+                                        <a class="dropdown-item" href="#">E-learning</a>
+                                        <a class="dropdown-item" href="#">Candidature de mastére</a>
+                                        <a class="dropdown-item" href="#">Candidature licence co-construite</a>
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -255,11 +311,10 @@
                                         Vie estudiantines                                        
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" href="/vietude">Clubs</a>
+                                        <a class="dropdown-item" href="#">Manifestations</a>
+                                        <a class="dropdown-item" href="#">Activités sportives</a>
+                                        <a class="dropdown-item" href="#">Activités culturelles</a>
                                         </div>
                                     </li>
                                     <li class="nav-item">
@@ -346,6 +401,89 @@
                         </div>                        
  
                     </main>
-                </div>
+                    <footer class="ftr">
+                        <div class="container py-5">
+                            <div class="row">
+                            <div class="col-12 col-md" > <b style="color: #3ea5de"><span style="color: #f4c312">Iset</span> bizerte</b>
+                            <span class="isetdesc">
+                                    est un établissement public à caractère scientifique et technologique. Sa principale mission consiste à contribuer
+                                    au développement socio-économique et au transfert technologique dans la région Bizerte ainsi que le renforcement de 
+                                    l'employabilité l’insertion professionnelle des diplômés de l’enseignement supérieur.
+                            </span>
+                            <small class="d-block my-3 text-muted">
+                                            Copyright © ISET Bizerte
+                                            2019-2020</small> </div>
+                      
+                            <div class="col-6 col-md">
+                                <h5><b><span style="color: #f4c312">R</span>esources</b></h5>
+                                <ul class="list-unstyled text-small">
+                                <li>
+                                    <a class="text-muted" href="#">Ministère ESRS</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Université du Carthage</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Inscription.tn</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Orientation.tn</a>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md">
+                                <h5><b><span style="color: #f4c312">C</span>ontact</b></h5>
+                                <ul class="list-unstyled text-small">
+                                <li>
+                                    <a class="text-muted" href="#"><b>Adresse</b></a>
+                                    <span class="contact">Campus Universitaire Menzel Abderrahmen BP n° 65 Bizerte 7035</span>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#"><b>CP</b></a>
+                                    <span class="contact">7035</span>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#"><b>Tél</b></a>
+                                    <span class="contact">+216 72 57 06 01 <br> +216 72 57 06 00</span>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#"><b>Fax</b></a>
+                                    <span class="contact">+216 72 572 455</span>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#"><b>Email</b></a>
+                                    <span class="contact">isetbz@isetbz.rnu.tn </span>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md">
+                                <h5><b><span style="color: #f4c312">A</span>bout</b></h5>
+                                <ul class="list-unstyled text-small">
+                                <li>
+                                    <a class="text-muted" href="#">Team</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Locations</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#">Terms</a>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md">
+                                <h5><b><span style="color: #f4c312">N</span>ewsliter</b></h5>
+                                <ul class="list-unstyled text-small">
+                                <li style="display: flex">
+                                    <input type="email" placeholder="Entrez votre email">
+                                    <input type="button" value="Envoyer" style="border: 0;background-color: #2c7596">
+                                </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </footer>
 </body>
 </html>
