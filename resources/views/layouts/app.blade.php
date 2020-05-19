@@ -163,11 +163,14 @@
                 color: #e4e8eb !important;
                 font-family: Verdana, Geneva, Tahoma, sans-serif
             }
-            .nav-item:hover{
-                background-color:#006daa;;
-                color: white !important;
-                padding: 0px;
+            .nav-link:hover{
+                color: #b3e8fc !important;
             }
+
+            .actcontenu{
+                background-color: #95ddf0;
+            }
+
     </style>
 </head>
 <body>

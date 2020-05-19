@@ -186,108 +186,101 @@
           </div>
           <br>
           <br>
+          <div class="act" style="background-color: #ececf0">
+                <div class="actcontenu">
+                  <span style="margin-left: 480px">
+                    <b>Le</b> 15/05/2020 02:30
+                    </span>
+                    <div class="contenu-act">
+                      <div class="title-act" style="margin-left: 30px">
+                        <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span class="newact" style="color: red;font-size: 10px">[NEW]</span></span>
+                      </div>
+                      <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px;">
+                      <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
+                        L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
+                        organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
+                        qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
+                        des lots intéressants indiqués sur le site.</p>
+                      </div>
+                    </div>
+                </div>
+              </div> 
               <div class="act" style="background-color: #ececf0">
-                <span style="margin-left: 480px">
-                  <b>Le</b> 15/05/2020 02:30
-                  </span>
-                  <div class="contenu-act">
-                    <div class="title-act" style="margin-left: 30px">
-                      <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span style="color: red;font-size: 10px">[NEW]</span></span>
+                <div class="actcontenu">
+                  <span style="margin-left: 480px">
+                    <b>Le</b> 15/05/2020 02:30
+                    </span>
+                    <div class="contenu-act">
+                      <div class="title-act" style="margin-left: 30px">
+                        <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span class="newact" style="color: red;font-size: 10px">[NEW]</span></span>
+                      </div>
+                      <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px;">
+                      <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
+                        L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
+                        organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
+                        qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
+                        des lots intéressants indiqués sur le site.</p>
+                      </div>
                     </div>
-                    <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px">
-                    <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
-                      L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
-                      organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
-                      qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
-                      des lots intéressants indiqués sur le site.</p>
-                    </div>
-                  </div>
+                </div>
               </div>
               <div class="act" style="background-color: #ececf0">
-                <span style="margin-left: 480px">
-                  <b>Le</b> 15/05/2020 02:30
-                  </span>
-                  <div class="contenu-act">
-                    <div class="title-act" style="margin-left: 30px">
-                      <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span style="color: red;font-size: 10px">[NEW]</span></span>
+                <div class="actcontenu">
+                  <span style="margin-left: 480px">
+                    <b>Le</b> 15/05/2020 02:30
+                    </span>
+                    <div class="contenu-act">
+                      <div class="title-act" style="margin-left: 30px">
+                        <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span class="newact" style="color: red;font-size: 10px">[NEW]</span></span>
+                      </div>
+                      <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px;">
+                      <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
+                        L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
+                        organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
+                        qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
+                        des lots intéressants indiqués sur le site.</p>
+                      </div>
                     </div>
-                    <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px">
-                    <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
-                      L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
-                      organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
-                      qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
-                      des lots intéressants indiqués sur le site.</p>
-                    </div>
-                  </div>
+                </div>
               </div>
               <div class="act" style="background-color: #ececf0">
-                <span style="margin-left: 480px">
-                  <b>Le</b> 15/05/2020 02:30
-                  </span>
-                  <div class="contenu-act">
-                    <div class="title-act" style="margin-left: 30px">
-                      <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span style="color: red;font-size: 10px">[NEW]</span></span>
+                <div class="actcontenu">
+                  <span style="margin-left: 480px">
+                    <b>Le</b> 15/05/2020 02:30
+                    </span>
+                    <div class="contenu-act">
+                      <div class="title-act" style="margin-left: 30px">
+                        <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span class="newact" style="color: red;font-size: 10px">[NEW]</span></span>
+                      </div>
+                      <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px;">
+                      <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
+                        L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
+                        organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
+                        qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
+                        des lots intéressants indiqués sur le site.</p>
+                      </div>
                     </div>
-                    <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px">
-                    <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
-                      L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
-                      organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
-                      qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
-                      des lots intéressants indiqués sur le site.</p>
-                    </div>
-                  </div>
+                </div>
               </div>
               <div class="act" style="background-color: #ececf0">
-                <span style="margin-left: 480px">
-                  <b>Le</b> 15/05/2020 02:30
-                  </span>
-                  <div class="contenu-act">
-                    <div class="title-act" style="margin-left: 30px">
-                      <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span style="color: red;font-size: 10px">[NEW]</span></span>
+                <div class="actcontenu">
+                  <span style="margin-left: 480px">
+                    <b class="le">Le</b> 15/05/2020 02:30
+                    </span>
+                    <div class="contenu-act">
+                      <div class="title-act" style="margin-left: 30px">
+                        <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span class="newact" style="color: red;font-size: 10px">[NEW]</span></span>
+                      </div>
+                      <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px;">
+                      <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
+                        L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
+                        organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
+                        qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
+                        des lots intéressants indiqués sur le site.</p>
+                      </div>
                     </div>
-                    <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px">
-                    <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
-                      L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
-                      organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
-                      qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
-                      des lots intéressants indiqués sur le site.</p>
-                    </div>
-                  </div>
-              </div>
-              <div class="act" style="background-color: #ececf0">
-                <span style="margin-left: 480px">
-                  <b>Le</b> 15/05/2020 02:30
-                  </span>
-                  <div class="contenu-act">
-                    <div class="title-act" style="margin-left: 30px">
-                      <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span style="color: red;font-size: 10px">[NEW]</span></span>
-                    </div>
-                    <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px">
-                    <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
-                      L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
-                      organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
-                      qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
-                      des lots intéressants indiqués sur le site.</p>
-                    </div>
-                  </div>
-              </div>
-              <div class="act" style="background-color: #ececf0">
-                <span style="margin-left: 480px">
-                  <b>Le</b> 15/05/2020 02:30
-                  </span>
-                  <div class="contenu-act">
-                    <div class="title-act" style="margin-left: 30px">
-                      <span><b>4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019  </b>  <span style="color: red;font-size: 10px">[NEW]</span></span>
-                    </div>
-                    <div class="cont" style="margin-left: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 12px">
-                    <p>ISET Bizerte vous invite à la 4ème édition du Digital Learning Hackathon les 20 et 21 Novembre 2019. 
-                      L'équipe gagnante ira pitcher devant des jury professionnels pendant la 7ème édition du Forum E-learning Tunisie, 
-                      organisé par ISET'Com en collaboration avec le Centre pour le Développement des Compétences Professionnelles (CDCP), 
-                      qui se tiendra les 15 et 16 janviers 2020.  Les trois meilleurs projets à l'échelle nationale seront récompensés par 
-                      des lots intéressants indiqués sur le site.</p>
-                    </div>
-                  </div>
-              </div>
+                </div>
+              </div>  
                     
     </div>
     <div class="lfa">
