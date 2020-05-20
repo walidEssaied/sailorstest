@@ -24,19 +24,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('etudiant.index') }}">
                   <span data-feather="file"></span>
                   Etudiant
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('stage.index') }}">
                   <span data-feather="shopping-cart"></span>
                   Stage
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('societe.index') }}">
                   <span data-feather="users"></span>
                   Societe
                 </a>
@@ -117,9 +117,7 @@
 
 
 
-          <!DOCTYPE HTML>
-<html>
-<head>
+
           <script>
                     window.onload = function () {
 
