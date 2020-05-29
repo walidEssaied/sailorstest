@@ -14,7 +14,8 @@ class StageController extends Controller
      */
     public function index()
     {
-        //
+        $stages = stage::latest()->paginate(5);
+		return view('stage.index',compact('stages'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -24,7 +25,7 @@ class StageController extends Controller
      */
     public function create()
     {
-        //
+        return view('stage.create');
     }
 
     /**
@@ -35,7 +36,15 @@ class StageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->validationRules());
+
+        $stage = new Stage;
+        $stage->stage_type= $request->stage_type;
+        $stage->stage_date_debut = $request->stage_date_debut;
+        $stage->stage_date_fin = $request->stage_date_fin;
+
+        $stage->save();
+        return redirect()->route('stage.index')->with('AddStage', 'Un nouveau stage ajoutée avec succées');
     }
 
     /**
@@ -46,7 +55,7 @@ class StageController extends Controller
      */
     public function show(stage $stage)
     {
-        //
+        return view('stage.show')->with('stages', $stage);
     }
 
     /**
@@ -57,7 +66,7 @@ class StageController extends Controller
      */
     public function edit(stage $stage)
     {
-        //
+        return view('stage.edit',compact('stage'));
     }
 
     /**
@@ -69,7 +78,11 @@ class StageController extends Controller
      */
     public function update(Request $request, stage $stage)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+
+        $stage->update($validatedData);
+
+        return redirect()->route('stage.show', $stage->id)->with('updateStage', 'Stage modifiée avec succées ');
     }
 
     /**
@@ -80,6 +93,17 @@ class StageController extends Controller
      */
     public function destroy(stage $stage)
     {
-        //
+        $stage->delete();
+
+        return redirect()->route('stage.index')->with('deleteStage', 'Stage supprimée avec succées ');
     }
+    private function validationRules()
+    {
+        return [
+            'stage_type' => 'required',
+            'stage_date_debut' => 'required',
+            'stage_date_fin' => 'required',
+        ];
+    }
+
 }

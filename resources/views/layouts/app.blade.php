@@ -160,15 +160,19 @@
                 font-family: Verdana, Geneva, Tahoma, sans-serif
             }
             .nav-link{
+                font-size: 12px;
                 color: #e4e8eb !important;
-                font-family: Verdana, Geneva, Tahoma, sans-serif
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
             .nav-link:hover{
                 color: #b3e8fc !important;
             }
-
+            
             .actcontenu{
                 background-color: #95ddf0;
+            }
+            #dashbord{
+                color: black !important;
             }
 
     </style>
@@ -207,10 +211,10 @@
                                 <div class="contact pull-left">
                                     <table style="margin-right:50px;" width="100%">
                                     <tbody><tr>
-                                        <td><h6>
+                                        <td><h6 style="color: black">
                                             <i class="fa fa-phone"></i> +216 72 570 601 
                                         </h6></td>
-                                        <td ><h6>
+                                        <td ><h6 style="color: black">
                                             <i class="fa fa-fax"></i> +216 72 572 455
                                         </h6></td>
                                     </tr>
@@ -311,7 +315,7 @@
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="/vietude" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Vie estudiantines                                        
+                                        Vie etudiants                                      
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="/vietude">Clubs</a>
@@ -325,16 +329,17 @@
                                     </li>
                                     </ul>
                             @auth
+
                             <ul class="navbar-nav mr-auto">
                                 @admin
-                                        <li class="nav-item">
-                                            <a href="{{ route('etudiant.index') }}" class="nav-link">Etudiant</a>
+                                <li class="nav-item">
+                                            <a href="{{ route('etudiant.index') }}" class="nav-link" style="color: black !important">Etudiant</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('stage.index') }}" class="nav-link" >Stage</a>
+                                            <a href="{{ route('stage.index') }}" class="nav-link" style="color: black !important" >Stage</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{{ route('societe.index') }}" class="nav-link">Societe</a>
+                                            <a href="{{ route('societe.index') }}" class="nav-link" style="color: black !important">Societe</a>
                                         </li>
                                 @elseadmin 
                                 

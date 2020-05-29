@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','new etudiants')
+@section('title','Nouvel Etudiant')
 @section('content')
 <fieldset>
 <legend>new etudiant</legend>

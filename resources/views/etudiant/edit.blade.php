@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Etudiant')
+@section('title', 'Modifier Etudiant')
 
 @section('content')
     <fieldset>

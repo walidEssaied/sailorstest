@@ -29,7 +29,7 @@
            @foreach ($societes as $societe)
             <a href="{{ route('societe.show', $societe->id) }}">
                 <li class="list-group-item list-group-item-action">
-                    <strong>{{ $societe->societe_nom }}</strong> 
+                    <strong>{{$societe->societe_nom}}</strong> 
                     <strong>{{ $societe->societe_adresse }}</strong>
                     <strong>{{ $societe->societe_email}}</strong>
                     <strong>{{ $societe->societe_tel }}</strong>

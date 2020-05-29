@@ -14,10 +14,7 @@ class SocieteController extends Controller
      * Display a listing of the resource.
      *
      * @return void \Illuminate\Http\Response*/
-      public function __construct()
-      {
-         //
-      }
+
 
       public function index()
       {
@@ -46,14 +43,13 @@ class SocieteController extends Controller
         $request->validate($this->validationRules());
 
         $societe = new Societe;
-        $societe->user_id = Auth::id();
         $societe->societe_nom= $request->societe_nom;
         $societe->societe_adresse = $request->societe_adresse;
         $societe->societe_email = $request->societe_email;
         $societe->societe_tel = $request->societe_tel;
 
         $societe->save();
-        return redirect()->route('societe.index')->with('AddSociete', 'A nouveau societe ajoutée avec succées');
+        return redirect()->route('societe.index')->with('AddSociete', 'Une nouveau societe ajoutée avec succées');
 
     }
 

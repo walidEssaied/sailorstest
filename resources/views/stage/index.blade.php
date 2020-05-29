@@ -31,9 +31,9 @@
            @foreach ($stages as $stage)
             <a href="{{ route('stage.show', $stage->id) }}">
                 <li class="list-group-item list-group-item-action">
-                <strong>$stage->stage_type = $request->stage_type;</strong>
-                <strong>$stage->stage_date_debut = $request->stage_date_debut;</strong>
-                <strong>$stage->stage_date_fin = $request->stage_date_fin;</strong>
+                <strong>{{$stage->stage_type}}</strong>
+                <strong>{{$stage->stage_date_debut}}</strong>
+                <strong>{{$stage->stage_date_fin}}</strong>
                 </li>
             </a>
             @endforeach

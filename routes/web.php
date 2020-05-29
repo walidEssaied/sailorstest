@@ -32,7 +32,9 @@ Route::get('/vietude', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-
+Route::get('/dashbordadmin', function () {
+    return view('dashbordadmin');
+});
 
 Auth::routes();
 

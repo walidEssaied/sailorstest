@@ -15,9 +15,9 @@ class EtudiantController extends Controller
      */
     public function index()
     {
-        $page_name = 'etudiant';
-        $data = Etudiant::all();
-        return view('etudiant.index',compact('data','page_name'));
+        $etudiants = etudiant::latest()->paginate(5);
+		return view('etudiant.index',compact('etudiants'))->with('i', (request()->input('page', 1) - 1) * 5);
+        
     }
 
     /**
@@ -59,7 +59,7 @@ class EtudiantController extends Controller
 
         $etudiant->save();
 
-      Mail::to(Auth::user()->email)->send(new Newetudiant($etudiant));
+    //   Mail::to(Auth::user()->email)->send(new Newetudiant($etudiant));
 
         return redirect()->route('etudiant.index')->with('addetudiant','New etudiant added successfully');
     }
@@ -95,8 +95,8 @@ class EtudiantController extends Controller
      */
     public function update(Request $request, etudiant $etudiant)
     {
-       $validatedata - $request->validate($this->validationRules());
-       $etudiant->update($validatedata);
+        $request->validate($this->validationRules());
+        $request->validate($this->validationRules());
        return redirect()->route('etudiant.show'.$etudiant->id)->with('updateEtudiant'. 'Etudiant update successfully');
     }
 

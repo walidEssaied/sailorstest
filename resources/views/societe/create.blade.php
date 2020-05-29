@@ -1,6 +1,6 @@
 @extends ('layouts.app')
 
-@section ('title','New Society')
+@section ('title','Nouvelle Societé')
 
 @section ('content')
 <fieldset>
