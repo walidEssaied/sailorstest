@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\stage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class StageController extends Controller
 {
@@ -15,6 +17,7 @@ class StageController extends Controller
     public function index()
     {
         $stages = stage::latest()->paginate(5);
+        // dd($stages);
 		return view('stage.index',compact('stages'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -39,9 +42,11 @@ class StageController extends Controller
         $request->validate($this->validationRules());
 
         $stage = new Stage;
-        $stage->stage_type= $request->stage_type;
-        $stage->stage_date_debut = $request->stage_date_debut;
-        $stage->stage_date_fin = $request->stage_date_fin;
+        $stage->type= $request->stage_type;
+        $stage->date_debut = $request->stage_date_debut;
+        $stage->date_fin = $request->stage_date_fin;
+        $stage->user_id = Auth::id();
+
 
         $stage->save();
         return redirect()->route('stage.index')->with('AddStage', 'Un nouveau stage ajoutée avec succées');

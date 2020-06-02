@@ -23,23 +23,69 @@
 <a href="{{ route('etudiant.create') }}" class="btn btn-outline-primary btn-lg float-right" role="button"
     aria-pressed="true">Ajouter un étudiant !</a>
 <h1>Liste des etudiants</h1>
+<br>
 <div class="row">
-    <div class="col">
-        <ul class="list-group">
-        @foreach ($etudiants as $etudiant)
-            <a href="{{ route('etudiant.show', $etudiant->id) }}">
-                <li class="list-group-item list-group-item-action">
-                    <strong>{{ $etudiant->cin }}</strong> 
-                    <strong>{{ $etudiant->Nom }}</strong>
-                    <strong>{{ $etudiant->Prenom }}</strong> 
-                    <strong>{{ $etudiant->Adresse }}</strong>
-                    <strong>{{ $etudiant->tel }}</strong> 
-                    <strong>{{ $etudiant->email }}</strong>
-                    <strong>{{ $etudiant->niveau }}</strong>
-                </li>
-            </a>
-            @endforeach
-        </ul>
+
+    <table class="table table-hover">
+    <thead >
+      <tr>
+        <th scope="col">Edit page</th>
+        <th scope="col">Cin</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Tel</th>
+        <th scope="col">Email</th>
+        <th scope="col">Niveau</th>
+        <th scope="col">Option</th>
+      </tr>
+    </thead>
+    <tbody>
+    @foreach ($etudiants as $etudiant)
+      <tr>
+            
+        <td><a href="{{ route('etudiant.show', $etudiant->id) }}" class="btn btn-outline-info">Edit page</a></td>
+        <td> {{ $etudiant->cin}}</td>
+        <td> {{ $etudiant->Nom}}</td>
+        <td> {{ $etudiant->Prenom}}</td>
+        <td> {{ $etudiant->Adress}}</td>
+        <td> {{ $etudiant->tel}}</td>
+        <td> {{ $etudiant->email}}</td>
+        <td> {{ $etudiant->niveau}}</td>
+        <td>
+            <a href="{{ route('etudiant.edit', $etudiant->id) }}" class="btn btn-outline-info">Edit</a>
+            <a href="{{ route('etudiant.destroy', $etudiant->id) }}" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Delete</a>
+            
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+  </table>
+  <!-- Modal -->
+  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete etudiant</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure to delete your student ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-danger"
+            onclick="event.preventDefault();
+            document.querySelector('#delete-etudiant-form').submit();">Confirm delete</button>
+        </div>
+        <form id="delete-etudiant-form" action="{{ route('etudiant.destroy', $etudiant->id) }}" method="POST" style="display: none;">
+            @csrf
+            @method('DELETE')
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 @endsection

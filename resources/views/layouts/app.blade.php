@@ -342,28 +342,8 @@
                                             <a href="{{ route('societe.index') }}" class="nav-link" style="color: black !important">Societe</a>
                                         </li>
                                 @elseadmin 
-                                
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">Accueil</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link" >Nouveautés</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">Institut</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">Département</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">Formation</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">Vie estudiantines</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="" class="nav-link">Contact</a>
-                                    </li>
+                                    
+ 
                                 @endadmin   
                             </ul>
                         @endauth

@@ -39,16 +39,17 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validated([
+        $request->validate([
             'cin' => 'required',
             'Nom' =>'required','string',
             'Prenom' =>'required','string',
             'tel' => 'required',
             'Adresse' =>'required','string',
             'email' => 'required','email:rfc,dns',
-            'niveau' =>'required','string']);
+            'niveau' =>'required','string'
+            ]);
         $etudiant= new etudiant;
-        $etudiant->id = Auth::id();
+        $etudiant->user_id = Auth::id();
         $etudiant->cin = $request->cin;
         $etudiant->Nom = $request->Nom;
         $etudiant->Prenom = $request->Prenom;
@@ -95,8 +96,12 @@ class EtudiantController extends Controller
      */
     public function update(Request $request, etudiant $etudiant)
     {
-        $request->validate($this->validationRules());
-        $request->validate($this->validationRules());
+        // dd($etudiant->id);  
+        // $etd=etudiant::findOrFail($etudiant->id);
+        // $request->validate($this->validationRules());
+        $etudiant->update($request->all());
+        // dd($etd);
+        return $etudiant;
        return redirect()->route('etudiant.show'.$etudiant->id)->with('updateEtudiant'. 'Etudiant update successfully');
     }
 
@@ -113,6 +118,13 @@ class EtudiantController extends Controller
         return redirect()->route('etudiant.index')->with('deleteEtudiant'. 'Etudiant delete successfully');
 
 
+    }    
+    public function delete(etudiant $etudiant)
+    {   
+        $id = $etudiant->id;
+        $nCard= etudiant::find($id);
+        $nCard->delete();
+        return back();
     }
     private function validationRules()
     {
@@ -125,5 +137,7 @@ class EtudiantController extends Controller
             'email' => 'required',
             'niveau' => 'required',
             'idsociete' => 'required',
-        ];
-}   } 
+        ];  
+    }
+   }
+

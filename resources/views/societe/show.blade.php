@@ -23,13 +23,18 @@
     </thead>
     <tbody>
       <tr>
-        <td> {{ $societe->societe_nom}}</td>
+        <td> {{ $societe->id}}</td>
+        <td> {{ $societe->nom}}</td>
+        <td> {{ $societe->Email}}</td>
+        <td> {{ $societe->email}}</td>
+        <td> {{ $societe->tel}}</td>
+        <!-- <td> {{ $societe->societe_nom}}</td>
         <td> {{ $societe->societe_adresse}}</td>
         <td> {{ $societe->societe_email}}</td>
-        <td> {{ $societe->societe_tel}}</td>
+        <td> {{ $societe->societe_tel}}</td> -->
         <td>
             <a href="{{ route('societe.edit', $societe->id) }}" class="btn btn-outline-info">Editer</a>
-            <a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Supprimer</a>
+            <a href="{{ route('societe.destroy', $societe->id) }}" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Supprimer</a>
             
         </td>
       </tr>

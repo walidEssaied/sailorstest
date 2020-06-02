@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class etudiant extends Model
 {
+    protected $fillable = ['token'];
     public function societe (){
        
         return $this->belongsTo('App\societe');

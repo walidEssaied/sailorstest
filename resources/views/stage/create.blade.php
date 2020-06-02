@@ -33,7 +33,6 @@
          @error('stage_date_fin')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>
->
     <div class="row">
     <button type ="submit" class="btn btn-outline-primary btn-block">Enregistrer</button>
     </div>

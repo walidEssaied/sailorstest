@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class societe extends Model
 {
-    protected $guarded = [] ;
+    // protected $fillable = ['societe_nom'];
+    protected $guarded = array() ;
     public function etudiant()
     {
        return  $this->hasMany('App\etudiant');

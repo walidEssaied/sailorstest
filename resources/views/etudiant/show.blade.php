@@ -19,7 +19,7 @@
         <th scope="col">prenom</th>
         <th scope="col">Adresse</th>
         <th scope="col">tel</th>
-        <th scope="col">email/th>
+        <th scope="col">email </th>
         <th scope="col">niveau</th>
       </tr>
     </thead>
@@ -34,7 +34,7 @@
         <td> {{ $etudiant->niveau}}</td>
         <td>
             <a href="{{ route('etudiant.edit', $etudiant->id) }}" class="btn btn-outline-info">Edit</a>
-            <a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Delete</a>
+            <a href="{{ route('etudiant.destroy', $etudiant->id) }}" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Delete</a>
             
         </td>
       </tr>
