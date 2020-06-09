@@ -37,6 +37,9 @@ Route::get('/contact', function () {
 Route::get('/dashbordadmin', function () {
     return view('dashbordadmin');
 });
+// Route::get('/societeaddstage', function () {
+//     return view('add');
+// });
 
 Auth::routes();
 
@@ -45,5 +48,6 @@ Route::get('/home', 'AppController@home')->name('home');
 Route::resource('/etudiant', 'EtudiantController');
 Route::resource('/societe', 'SocieteController');
 Route::resource('/stage', 'StageController');
+Route::resource('/societeaddstage', 'SocieteHasStageController');
 Route::put('/etudiant/{id}','EtudiantController@update');
 });

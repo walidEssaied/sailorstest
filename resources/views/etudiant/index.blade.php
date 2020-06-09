@@ -25,7 +25,8 @@
 <h1>Liste des etudiants</h1>
 <br>
 <div class="row">
-
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
     <table class="table table-hover">
     <thead >
       <tr>
@@ -40,7 +41,7 @@
         <th scope="col">Option</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
     @foreach ($etudiants as $etudiant)
       <tr>
             

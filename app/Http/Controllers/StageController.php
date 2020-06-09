@@ -42,9 +42,9 @@ class StageController extends Controller
         $request->validate($this->validationRules());
 
         $stage = new Stage;
-        $stage->type= $request->stage_type;
-        $stage->date_debut = $request->stage_date_debut;
-        $stage->date_fin = $request->stage_date_fin;
+        $stage->type = $request->type;
+        $stage->date_debut = $request->date_debut;
+        $stage->date_fin = $request->date_fin;
         $stage->user_id = Auth::id();
 
 
@@ -105,9 +105,9 @@ class StageController extends Controller
     private function validationRules()
     {
         return [
-            'stage_type' => 'required',
-            'stage_date_debut' => 'required',
-            'stage_date_fin' => 'required',
+            'type' => 'required',
+            'date_debut' => 'required',
+            'date_fin' => 'required',
         ];
     }
 

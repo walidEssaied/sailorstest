@@ -14,7 +14,8 @@ class EtudiantHasStageController extends Controller
      */
     public function index()
     {
-        //
+        // return view('societe.index',compact('societes'))->with('i', (request()->input('page', 1) - 1) * 5);    
+
     }
 
     /**

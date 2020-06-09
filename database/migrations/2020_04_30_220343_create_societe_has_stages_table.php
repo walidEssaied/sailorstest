@@ -17,8 +17,8 @@ class CreateSocieteHasStagesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('idsociete')->unsigned();
             $table->bigInteger('idstage')->unsigned();
-            $table->foreign('idsociete')->references('id')->on('societes');
-            $table->foreign('idstage')->references('id')->on('stages');
+            $table->foreign('idsociete')->references('id')->on('societes')->onDelete('cascade');;
+            $table->foreign('idstage')->references('id')->on('stages')->onDelete('cascade');;
             $table->timestamps();
         });
     }

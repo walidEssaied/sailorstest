@@ -17,8 +17,8 @@ class CreateEtudiantHasStagesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('idetud')->unsigned();
             $table->bigInteger('idstage')->unsigned();
-            $table->foreign('idetud')->references('id')->on('etudiants');
-            $table->foreign('idstage')->references('id')->on('stages');
+            $table->foreign('idetud')->references('id')->on('etudiants')->onDelete('cascade');
+            $table->foreign('idstage')->references('id')->on('stages')->onDelete('cascade');
             $table->timestamps();
         });
     }
