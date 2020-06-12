@@ -1,6 +1,8 @@
-<!-- <?php
+<?php
 
+// namespace App\Http\Controllers;
 namespace App\Http\Controllers;
+
 use App\societe;
 use App\stage;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +22,7 @@ class SocieteHasStageController extends Controller
         // return view('societe.index',compact('societes'))->with('i', (request()->input('page', 1) - 1) * 5);
         $societes = societe::latest()->paginate(5);
         $stages = stage::latest()->paginate(5);
-        return view::make('societeaddstage.index')->with('societes', $societes)->with('stages', $stages);    
+        // return view::make('societeaddstage.index')->with('societes', $societes)->with('stages', $stages);    
     }
 
     /**
@@ -73,7 +75,7 @@ class SocieteHasStageController extends Controller
      * @param  \App\societe_has_stage  $societe_has_stage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, societe_has_stage $societe_has_stage)
+    public function update()
     {
         //
     }
@@ -84,8 +86,8 @@ class SocieteHasStageController extends Controller
      * @param  \App\societe_has_stage  $societe_has_stage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(societe_has_stage $societe_has_stage)
+    public function destroy()
     {
         //
     }
-} -->
+}

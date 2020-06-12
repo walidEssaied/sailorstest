@@ -10,14 +10,6 @@
     </button>
 </div>
 @endif
-
-
-
-
-
-
-
-
 <table class="table table-hover">
     <thead>
       <tr>
@@ -36,10 +28,7 @@
                     <a href="{{ route('stage.edit', $stage->id) }}" class="btn btn-outline-info">Edit</a>
                     <a href="{{ route('stage.destroy', $stage->id) }}" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Delete</a>
                 </td>
-                <td>
-                    <a href="{{ route('stage.edit', $stage->id) }}" class="btn btn-outline-info">Editer Stage info</a>
-                    <a href="{{ route('stage.destroy', $stage->id) }}" class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmDeleteModal">Supprimer</a>
-                </td>
+
        </tr>
     </tbody>
   </table>

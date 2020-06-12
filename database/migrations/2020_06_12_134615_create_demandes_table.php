@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use App\societe;
+use Illuminate\Validation\Rules\Unique;
 
-class CreateSocietesTable extends Migration
+class CreateDemandesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,11 @@ class CreateSocietesTable extends Migration
      */
     public function up()
     {
-        Schema::create('societes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('demandes', function (Blueprint $table) {
+            $table->string('id')->Unique;
+            $table->integer('state')->unsigned()->default(0);
             $table->bigInteger('user_id')->unsigned();
-            $table->string('nom');
-            $table->string('adresse');
-            $table->string('email');
-            $table->string('tel');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
+            $table->bigInteger('stage_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateSocietesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('societes');
+        Schema::dropIfExists('demandes');
     }
 }

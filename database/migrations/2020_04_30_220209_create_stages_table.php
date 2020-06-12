@@ -15,10 +15,12 @@ class CreateStagesTable extends Migration
         Schema::create('stages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('societe_id')->unsigned();
             $table->string('type');
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('societe_id')->references('id')->on('societes')->onDelete('cascade');
             $table->timestamps();
         });
     }

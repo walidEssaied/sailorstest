@@ -84,11 +84,18 @@ class SocieteController extends Controller
      */
     public function update(Request $request, societe $societe)
     {
-        $validatedData = $request->validate($this->validationRules());
+        
+         $validatedData = $request->validate($this->validationRules());
+        // return $validatedData;
+// 
+        // $societe->update($validatedData);
+        $societe->nom = $validatedData['nom'];
+        $societe->email = $validatedData['email'];
+        $societe->adresse = $validatedData['adresse'];
+        $societe->tel = $validatedData['tel'];
+        $societe->update();
 
-        $societe->update($validatedData);
-
-        return redirect()->route('societe.show', $societe->id)->with('updateSociete', 'Societe modifiée avec succées ');
+        return redirect()->route('societe.index')->with('updateSociete', 'Societe modifiée avec succées ');
     }
 
     /**
@@ -107,10 +114,11 @@ class SocieteController extends Controller
     private function validationRules()
     {
         return [
-            'societe_nom' => 'required',
-            'societe_adresse' => 'required',
-            'societe_email' => 'required',
-            'societe_tel'=>'required',
+            'nom' => 'required',
+            'adresse' => 'required',
+            'email' => 'required',
+            'tel'=>'required',
+            
         ];
     }
 }

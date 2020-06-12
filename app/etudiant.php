@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class etudiant extends Model
 {
     protected $fillable = ['token'];
+    protected $guarded =[];
     public function societe (){
        
         return $this->belongsTo('App\societe');

@@ -48,6 +48,8 @@ Route::get('/home', 'AppController@home')->name('home');
 Route::resource('/etudiant', 'EtudiantController');
 Route::resource('/societe', 'SocieteController');
 Route::resource('/stage', 'StageController');
+Route::resource('/demande', 'ReturndemandeController');
+Route::resource('/demander', 'DemandeController');
 Route::resource('/societeaddstage', 'SocieteHasStageController');
 Route::put('/etudiant/{id}','EtudiantController@update');
 });

@@ -43,8 +43,8 @@ class EtudiantController extends Controller
             'cin' => 'required',
             'Nom' =>'required','string',
             'Prenom' =>'required','string',
-            'tel' => 'required',
             'Adresse' =>'required','string',
+            'tel' => 'required',
             'email' => 'required','email:rfc,dns',
             'niveau' =>'required','string'
             ]);
@@ -98,11 +98,23 @@ class EtudiantController extends Controller
     {
         // dd($etudiant->id);  
         // $etd=etudiant::findOrFail($etudiant->id);
-        // $request->validate($this->validationRules());
-        $etudiant->update($request->all());
-        // dd($etd);
-        return $etudiant;
-       return redirect()->route('etudiant.show'.$etudiant->id)->with('updateEtudiant'. 'Etudiant update successfully');
+        // $validateData = $request->validate($this->validationRules());
+        // $etudiant->update($validateData);
+
+        $validatedData = $request->validate($this->validationRules());
+
+        $etudiant->cin = $validatedData['Cin'];
+        $etudiant->Nom = $validatedData['Nom'];
+        $etudiant->Prenom = $validatedData['Prenom'];
+        $etudiant->Adresse = $validatedData['Adresse'];
+        $etudiant->tel = $validatedData['Tel'];
+        $etudiant->email = $validatedData['Email'];
+        $etudiant->niveau = $validatedData['Niveau'];
+        $etudiant->idsociete = $validatedData['idsociete'];
+
+        $etudiant->update();
+
+        return redirect()->route('etudiant.index')->with('updateEtudiant'. 'Etudiant update successfully');
     }
 
 
@@ -112,9 +124,12 @@ class EtudiantController extends Controller
      * @param  \App\etudiant  $etudiant
      * @return \Illuminate\Http\Response
      */
-    public function destroy(etudiant $etudiant)
+    public function destroy($id)
     {
-        $etudiant -> delete();
+        // $bfaccounts = bufashaccounts::findOrFail($id);
+        // $bfeditAccounts->delete();
+        $etudiant = etudiant::findOrFail($id);
+        $etudiant->delete($id);
         return redirect()->route('etudiant.index')->with('deleteEtudiant'. 'Etudiant delete successfully');
 
 
@@ -129,13 +144,13 @@ class EtudiantController extends Controller
     private function validationRules()
     {
         return [
-            'cin' => 'required',
-            'nom' => 'required',
-            'prenom' => 'required',
-            'adresse' => 'required',
-            'tel' => 'required',
-            'email' => 'required',
-            'niveau' => 'required',
+            'Cin' => 'required',
+            'Nom' => 'required',
+            'Prenom' => 'required',
+            'Adresse' => 'required',
+            'Tel' => 'required',
+            'Email' => 'required',
+            'Niveau' => 'required',
             'idsociete' => 'required',
         ];  
     }

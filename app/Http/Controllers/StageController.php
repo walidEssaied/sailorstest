@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class StageController extends Controller
 {
     /**
@@ -39,12 +40,13 @@ class StageController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate($this->validationRules());
+        $validateData = $request->validate($this->validationRules());
 
-        $stage = new Stage;
-        $stage->type = $request->type;
-        $stage->date_debut = $request->date_debut;
-        $stage->date_fin = $request->date_fin;
+        $stage = new Stage();
+        $stage->type = $validateData['type'];
+        $stage->date_debut = $validateData['date_debut'];
+        $stage->date_fin = $validateData['date_fin'];
+
         $stage->user_id = Auth::id();
 
 
@@ -60,7 +62,7 @@ class StageController extends Controller
      */
     public function show(stage $stage)
     {
-        return view('stage.show')->with('stages', $stage);
+        return view('stage.show')->with('stage', $stage);
     }
 
     /**
@@ -83,11 +85,16 @@ class StageController extends Controller
      */
     public function update(Request $request, stage $stage)
     {
+
         $validatedData = $request->validate($this->validationRules());
 
-        $stage->update($validatedData);
+        $stage->type = $validatedData['type'];
+        $stage->date_debut = $validatedData['date_debut'];
+        $stage->date_fin = $validatedData['date_fin'];
 
-        return redirect()->route('stage.show', $stage->id)->with('updateStage', 'Stage modifiée avec succées ');
+        $stage->update();
+
+        return redirect()->route('stage.index')->with('updateStage', 'Stage modifiée avec succées ');
     }
 
     /**

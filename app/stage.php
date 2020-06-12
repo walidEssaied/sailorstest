@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class stage extends Model
 {
-    // protected $fillable = ['stage_type'];
+    protected $guarded =[];
+    // protected $fillable = ['type'];
+    // protected $guarded = ['id']; 
+
+    // protected $guarded = [''];
     public function etudiant()
     {
        return  $this->hasMany('App\etudiant');
