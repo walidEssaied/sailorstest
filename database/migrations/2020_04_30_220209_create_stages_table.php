@@ -15,7 +15,7 @@ class CreateStagesTable extends Migration
         Schema::create('stages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('societe_id')->unsigned();
+            $table->bigInteger('societe_id')->unsigned()->default(1);
             $table->string('type');
             $table->date('date_debut');
             $table->date('date_fin');

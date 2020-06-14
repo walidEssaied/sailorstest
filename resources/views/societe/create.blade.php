@@ -10,36 +10,36 @@
 <div class="row">
   <div class="col">
     <div class="form-group">
-      <label for="societe_nom">Nom</label>
-         <input type="text" name="societe_nom" value="{{ old('societe_nom') }}" id="societe_nom" class="form-control" placeholder="">
-         @error('societe_nom')<div class="text-danger">{{ $message }}</div> @enderror
+      <label for="nom">Nom</label>
+         <input type="text" name="nom"  id="nom" class="form-control" placeholder="">
+         @error('nom')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>
 
 <div class="row">
   <div class="col">
     <div class="form-group">
-      <label for="societe_adresse">Adresse</label>
-         <input type="text" name="societe_adresse" value="{{ old('societe_adresse') }}" id="societe_adresse" class="form-control" placeholder="">
-         @error('societe_adresse')<div class="text-danger">{{ $message }}</div> @enderror
+      <label for="adresse">Adresse</label>
+         <input type="text" name="adresse"  id="adresse" class="form-control" placeholder="">
+         @error('adresse')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>
 
 <div class="row">
   <div class="col">
     <div class="form-group">
-      <label for="societe_email">Email</label>
-         <input type="text" name="societe_email" value="{{ old('societe_email') }}" id="societe_email" class="form-control" placeholder="">
-         @error('societe_email')<div class="text-danger">{{ $message }}</div> @enderror
+      <label for="email">Email</label>
+         <input type="text" name="email"  id="email" class="form-control" placeholder="">
+         @error('email')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>
 
 <div class="row">
   <div class="col">
     <div class="form-group">
-      <label for="societe_tel">Telephone</label>
-         <input type="number" name="societe_tel" value="{{ old('societe_tel') }}" id="societe_tel" class="form-control" placeholder="">
-         @error('societe_tel')<div class="text-danger">{{ $message }}</div> @enderror
+      <label for="tel">Telephone</label>
+         <input type="number" name="tel"  id="tel" class="form-control" placeholder="">
+         @error('tel')<div class="text-danger">{{ $message }}</div> @enderror
         </div>
     </div>
     <div class="row">

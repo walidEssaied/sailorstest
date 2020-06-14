@@ -43,10 +43,10 @@ class SocieteController extends Controller
         $request->validate($this->validationRules());
 
         $societe = new Societe;
-        $societe->nom= $request->societe_nom;
-        $societe->adresse = $request->societe_adresse;
-        $societe->email = $request->societe_email;
-        $societe->tel = $request->societe_tel;
+        $societe->nom= $request->nom;
+        $societe->adresse = $request->adresse;
+        $societe->email = $request->email;
+        $societe->tel = $request->tel;
         $societe->user_id = Auth::id();
         $societe->save();
         return redirect()->route('societe.index')->with('AddSociete', 'Une nouveau societe ajoutée avec succées');
@@ -89,6 +89,7 @@ class SocieteController extends Controller
         // return $validatedData;
 // 
         // $societe->update($validatedData);
+        $validatedData = $request->validate($this->validationRules());
         $societe->nom = $validatedData['nom'];
         $societe->email = $validatedData['email'];
         $societe->adresse = $validatedData['adresse'];

@@ -237,7 +237,7 @@
                                             <h6><a href="/" target="_blank" style="text-decoration: none">Iset Bizerte</a><br><a href="/" style="text-decoration: none">Institut Supérieur des Etudes Technologiques de Bizerte</a></h6>
                                         </td>
                                         <td>
-                                            <a href="/"><img id="logo" src="https://scontent.ftun3-1.fna.fbcdn.net/v/t1.0-9/41642424_2022159831176528_3378769296233594880_n.jpg?_nc_cat=102&_nc_sid=85a577&_nc_eui2=AeHf-gWi1g66FiMWrBrz5Zc5rai4lWeHzZKtqLiVZ4fNkq_xBswISYtzwb5gegLrbh874Ad6GIT36lgpFT784hR_&_nc_ohc=pYPEBYn2DNQAX9af-x7&_nc_ht=scontent.ftun3-1.fna&oh=3be49a6f6174833568843093d4a52a7c&oe=5EE3CAAB" alt="Logo ISETB" width="53" height="51"></a>
+                                            <a href="/"><img id="logo" src="http://1.bp.blogspot.com/-sUt9UH6SPbw/UM7RWT2u8OI/AAAAAAAAAB4/J9rnvMUdE28/s200/logo+iset.jpg" alt="Logo ISETB" width="53" height="51"></a>
                                         </td>
                                     </tr>
                                 </tbody></table>
@@ -329,25 +329,7 @@
                                         <a href="/contact" class="nav-link">Contact</a>
                                     </li>
                                     </ul>
-                            @auth
-
-                            <ul class="navbar-nav mr-auto">
-                                @admin
-                                <li class="nav-item">
-                                            <a href="{{ route('etudiant.index') }}" class="nav-link" style="color: black !important">Etudiant</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{{ route('stage.index') }}" class="nav-link" style="color: black !important" >Stage</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{{ route('societe.index') }}" class="nav-link" style="color: black !important">Societe</a>
-                                        </li>
-                                @elseadmin 
-                                    
- 
-                                @endadmin   
-                            </ul>
-                        @endauth
+  
 
                                 <!-- Right Side Of Navbar -->
                                 <ul class="navbar-nav ml-auto">
@@ -384,6 +366,40 @@
                             </div>
                         </div>
             </nav>
+            <br>
+            @auth
+                                            @admin
+                            
+                            <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #222831" style="margin-left: 400px;">
+                            <a class="navbar-brand" href="{{ url('/') }}" style="color: #f4c312">
+                                Panneau de configuration ISETB
+                            </a>
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                            <a href="{{ route('etudiant.index') }}" class="nav-link" >Etudiant</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('stage.index') }}" class="nav-link"  >Stage</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('societe.index') }}" class="nav-link" >Societe</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('demande.index') }}" class="nav-link" >Demande</a>
+                                        </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                            <a href="{{ url('/') }}" class="nav-link" >Mettre à jour des evenements</a>
+                                        </li>
+                            </ul>
+                                @elseadmin 
+                                    
+ 
+                                @endadmin   
+                            
+                        @endauth
+                            </nav>
                     <main class="py-4">
                         <div class="container">
                             @yield('content')

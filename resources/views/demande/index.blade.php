@@ -1,62 +1,62 @@
 @extends('layouts.app')
 
-@section('title', 'Offres')
+@section('title', 'ISETB - Offres des stages')
 
 @section('content')
 @auth
 @admin
-<h1>
-    Demandes et offres
-</h1>
-<br>
-<div class="">
-    <span>
-        <h3>
-            Créer une nouvelle offres
-        </h3>
-    </span>
-    <br>
-    <a href="{{ route('demande.create') }}" class="btn btn-outline-info">Créer</a>
-</div>
-<br><br>
-<table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Nom de societe</th>
-        <th scope="col">Adress de societe</th>
-        <th scope="col">Type de stage</th>
-        <th scope="col">Date debut</th>
-        <th scope="col">Date fin</th>
-        <th scope="col">Option</th>
-      </tr>
-    </thead>
-    <tbody id="myTableetud">
+                <h1>
+                    Demandes et offres
+                </h1>
+                <br>
+                <div class="">
+                    <span>
+                        <h3>
+                            Créer une nouvelle offres
+                        </h3>
+                    </span>
+                    <br>
+                    <a href="{{ route('demande.create') }}" class="btn btn-outline-info">Créer</a>
+                </div>
+                <br><br>
+                <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th scope="col">Nom de societe</th>
+                              <th scope="col">Adress de societe</th>
+                              <th scope="col">Type de stage</th>
+                              <th scope="col">Date debut</th>
+                              <th scope="col">Date fin</th>
+                              <th scope="col">Option</th>
+                            </tr>
+                          </thead>
+                          <tbody id="myTableetud">
 
-    @foreach($demandes as $demande)
-      <tr>
-                <td> {{ $demande->nom }}</td>
-                <td> {{ $demande->adresse }}</td>
-                <td> {{ $demande->type }}</td>
-                <td> {{ $demande->date_debut }}</td>
-                <td> {{ $demande->date_fin }}</td>
-                <td>
-                    <a href="/demander?id={{ $demande->id }}" class="btn btn-outline-info">Approuve</a>
-                </td>
-                <td>
-                    <a href="/demander?id={{ $demande->id }}" class="btn btn-outline-info">Annuler</a>
-                </td>
+                          @foreach($demandes as $demande)
+                            <tr>
+                                      <td> {{ $demande->nom }}</td>
+                                      <td> {{ $demande->adresse }}</td>
+                                      <td> {{ $demande->type }}</td>
+                                      <td> {{ $demande->date_debut }}</td>
+                                      <td> {{ $demande->date_fin }}</td>
+                                      <td>
+                                          <a href="/demander?id={{ $demande->id }}" class="btn btn-outline-info">Approuve</a>
+                                      </td>
+                                      <td>
+                                          <a href="/demander?id={{ $demande->id }}" class="btn btn-outline-info">Annuler</a>
+                                      </td>
 
 
-      </tr>
-      @endforeach
+                            </tr>
+                            @endforeach
 
-    </tbody>
-  </table>
+                          </tbody>
+                </table>
 
 @elseadmin
+@endadmin
 
-
-  <section class="jumbotron text-center">
+<section class="jumbotron text-center">
     <div class="container">
       <h1>Offres des stages</h1>
       <p class="lead text-muted">Vous pouvez maintenant trouver facilement votre stage</p>
@@ -91,7 +91,7 @@
 
     @foreach($demandes as $demande)
       <tr>
-                <td><a href="" class="btn btn-outline-succes">Afficher</a></td>
+                <td><a href="" class="btn btn-outline-succes" disable style="opacity: 40%;">Afficher</a></td>
                 <td> {{ $demande->nom }}</td>
                 <td> {{ $demande->adresse }}</td>
                 <td> {{ $demande->type }}</td>
@@ -107,7 +107,8 @@
 
     </tbody>
   </table>
-  <script>
+@endauth
+<script>
 $(document).ready(function(){
   $("#myInputetud").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -117,7 +118,4 @@ $(document).ready(function(){
   });
 });
 </script>
-@endadmin
-
-@endauth
 @endsection

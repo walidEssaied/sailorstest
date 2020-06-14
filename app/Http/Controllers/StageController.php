@@ -43,11 +43,12 @@ class StageController extends Controller
         $validateData = $request->validate($this->validationRules());
 
         $stage = new Stage();
-        $stage->type = $validateData['type'];
-        $stage->date_debut = $validateData['date_debut'];
-        $stage->date_fin = $validateData['date_fin'];
+        $stage->type = $request->type;
+        $stage->date_debut = $request->date_debut;
+        $stage->date_fin = $request->date_fin;
 
         $stage->user_id = Auth::id();
+        $stage->societe_id = Auth::id();
 
 
         $stage->save();

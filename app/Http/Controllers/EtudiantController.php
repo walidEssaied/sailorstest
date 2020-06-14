@@ -62,7 +62,7 @@ class EtudiantController extends Controller
 
     //   Mail::to(Auth::user()->email)->send(new Newetudiant($etudiant));
 
-        return redirect()->route('etudiant.index')->with('addetudiant','New etudiant added successfully');
+        return redirect()->route('etudiant.index')->with('addetudiant','Nouveau etudiant ajouter avec succés');
     }
 
     /**

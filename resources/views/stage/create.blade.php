@@ -20,7 +20,7 @@
   <div class="col">
     <div class="form-group">
       <label for="date_debut">Date debut</label>
-         <input type="date" name="date_debut" value="{{ old('date_debut') }}" id="date_debut" class="form-control" placeholder="">
+         <input type="date" name="date_debut" id="date_debut" class="form-control" placeholder="">
          @error('date_debut')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>
@@ -29,7 +29,7 @@
   <div class="col">
     <div class="form-group">
       <label for="date_fin">Date fin</label>
-         <input type="date" name="date_fin" value="{{ old('date_fin') }}" id="date_fin" class="form-control" placeholder="">
+         <input type="date" name="date_fin" id="date_fin" class="form-control" placeholder="">
          @error('date_fin')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>

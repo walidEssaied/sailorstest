@@ -15,7 +15,7 @@ class ReturndemandeController extends Controller
         $demandes = DB::table('stages')->join('societes','stages.societe_id','=','societes.id')->select('societes.nom','societes.adresse','stages.id','stages.type','stages.date_debut','stages.date_fin')->get();
         
         
-        return view('demande.index',compact('demandes'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('demande.index',compact('demandes'));
 
     }
     public function create(){
