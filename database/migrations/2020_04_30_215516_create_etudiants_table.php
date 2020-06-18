@@ -27,7 +27,7 @@ class CreateEtudiantsTable extends Migration
             $table->bigInteger('idsociete')->unsigned()->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('idsociete')->references('id')->on('societes')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });

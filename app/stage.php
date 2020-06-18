@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class stage extends Model
 {
-    protected $guarded =[];
+    // protected $guarded =[];
     // protected $fillable = ['type'];
     // protected $guarded = ['id']; 
 

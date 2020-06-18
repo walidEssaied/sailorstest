@@ -3,7 +3,7 @@
 @section('title', 'ISETB - Les etudiants')
 
 @section('content')
-
+<div class="container">
 @if (session('addetudiant'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
     {{ session('addetudiant') }}
@@ -49,7 +49,7 @@
         <td> {{ $etudiant->cin}}</td>
         <td> {{ $etudiant->Nom}}</td>
         <td> {{ $etudiant->Prenom}}</td>
-        <td> {{ $etudiant->Adress}}</td>
+        <td> {{ $etudiant->Adresse}}</td>
         <td> {{ $etudiant->tel}}</td>
         <td> {{ $etudiant->email}}</td>
         <td> {{ $etudiant->niveau}}</td>
@@ -88,5 +88,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 @endsection

@@ -96,7 +96,7 @@ class SocieteController extends Controller
         $societe->tel = $validatedData['tel'];
         $societe->update();
 
-        return redirect()->route('societe.index')->with('updateSociete', 'Societe modifiée avec succées ');
+        return redirect()->route('societe.index')->with('updateSociete', 'Societe modifier avec succées ');
     }
 
     /**
@@ -109,7 +109,7 @@ class SocieteController extends Controller
     {
         $societe->delete();
 
-        return redirect()->route('societe.index')->with('deleteSociete', 'Societe supprimée avec succées ');
+        return redirect()->route('societe.index')->with('deleteSociete', 'Societe supprimer avec succées ');
     }
 
     private function validationRules()

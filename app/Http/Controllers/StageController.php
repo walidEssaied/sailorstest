@@ -52,7 +52,7 @@ class StageController extends Controller
 
 
         $stage->save();
-        return redirect()->route('stage.index')->with('AddStage', 'Un nouveau stage ajoutée avec succées');
+        return redirect()->route('stage.index')->with('AddStage', 'Un nouveau stage ajouter avec succées');
     }
 
     /**
@@ -95,7 +95,7 @@ class StageController extends Controller
 
         $stage->update();
 
-        return redirect()->route('stage.index')->with('updateStage', 'Stage modifiée avec succées ');
+        return redirect()->route('stage.index')->with('updateStage', 'Stage modifier avec succées ');
     }
 
     /**

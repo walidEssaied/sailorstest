@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class societe extends Model
 {
-    protected $fillable = ['nom','emal','adresse','tel',];
+    // protected $fillable = ['nom','email','adresse','tel',];
     // protected $guarded =['*'];
     public function etudiant()
     {

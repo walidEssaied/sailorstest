@@ -46,19 +46,19 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Delete etudiant</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Supprimer etudiant</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Are you sure to delete your student ?
+        Etes-vous sûr de supprimer ce etudiant ?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fermer</button>
           <button type="button" class="btn btn-outline-danger"
             onclick="event.preventDefault();
-            document.querySelector('#delete-etudiant-form').submit();">Confirm delete</button>
+            document.querySelector('#delete-etudiant-form').submit();">Confirm suppression</button>
         </div>
         <form id="delete-etudiant-form" action="{{ route('etudiant.destroy', $etudiant->id) }}" method="POST" style="display: none;">
             @csrf

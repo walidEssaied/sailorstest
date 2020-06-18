@@ -16,7 +16,6 @@
       </div>
 </div>
 
-<div class="row">
   <div class="col">
     <div class="form-group">
       <label for="date_debut">Date debut</label>
@@ -25,7 +24,6 @@
       </div>
 </div>
 
-<div class="row">
   <div class="col">
     <div class="form-group">
       <label for="date_fin">Date fin</label>
@@ -33,9 +31,7 @@
          @error('date_fin')<div class="text-danger">{{ $message }}</div> @enderror
       </div>
 </div>
-    <div class="row">
-    <button type ="submit" class="btn btn-outline-primary btn-block">Enregistrer</button>
-    </div>
+<button type ="submit" class="btn btn-outline-primary btn-block">Enregistrer</button>
 </div>
 </form>
 </fieldset>

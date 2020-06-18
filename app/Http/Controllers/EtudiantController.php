@@ -114,7 +114,7 @@ class EtudiantController extends Controller
 
         $etudiant->update();
 
-        return redirect()->route('etudiant.index')->with('updateEtudiant'. 'Etudiant update successfully');
+        return redirect()->route('etudiant.index')->with('updateEtudiant'. 'Etudiant mise à jour avec succée');
     }
 
 

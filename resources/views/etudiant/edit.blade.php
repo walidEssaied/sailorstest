@@ -7,6 +7,7 @@
       <form action="{{ route('etudiant.update', $etudiant->id) }}" method="post">
             @csrf
             @method('PATCH')
+            <div class="row">
                 <div class="col">
                     <div class="form-group">
                       <label for="Cin">Cin</label>
@@ -38,7 +39,7 @@
                 <div class="col">
                     <div class="form-group">
                       <label for="tel">Tel</label>
-                      <input type="number" name="Tel"  value="{{ old('Tel') ?? $etudiant->tel }}" id="tel" class="form-control" placeholder="" >
+                      <input type="number" name="tel"  value="{{ old('Tel') ?? $etudiant->tel }}" id="tel" class="form-control" placeholder="" >
                       @error('Tel')<div class="text-danger">{{ $message }}</div> @enderror
                     </div>
                 </div>
@@ -64,5 +65,6 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-outline-primary btn-block">Confirm update</button>
+                </div>
         </form>
     @endsection

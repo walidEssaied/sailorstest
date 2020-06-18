@@ -3,7 +3,7 @@
 @section('title','Nouvel Etudiant')
 @section('content')
 <fieldset>
-<legend>new etudiant</legend>
+<legend>Nouveau etudiant</legend>
 <form action="{{ route('etudiant.store') }}" method="post">
 @csrf
 <div class="row">
